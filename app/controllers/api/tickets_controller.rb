@@ -16,7 +16,7 @@ class Api::TicketsController < Api::ApiController
     excavator = params[:excavator_attributes]
     contact = excavator.fetch(:Contact, {}).keys
     field_contact = excavator.fetch(:FieldContact, {}).keys
-    params.permit(:ContactCenter, :RequestNumber,:SequenceNumber, :RequestType, :RequestAction, :AdditionalServiceArea, :DigsiteInfo,
+    params.permit(:ContactCenter, :RequestNumber,:SequenceNumber, :WellKnownText, :RequestType, :RequestAction, :AdditionalServiceArea, :DigsiteInfo,
                   excavator_attributes: [:CompanyName, :Address, :State, :Zip,
                                          :Type, :CrewOnsite, Contact: contact, FieldContact: field_contact],
                   DateTimes: date_times )
