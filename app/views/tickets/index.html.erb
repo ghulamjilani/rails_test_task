@@ -1,0 +1,20 @@
+<table>
+  <thead>
+  <tr>
+    <th>ContactCenter</th>
+    <th>RequestNumber</th>
+    <th>SequenceNumber</th>
+    <th></th>
+  </tr>
+  </thead>
+  <tbody>
+    <% @tickets.each do |ticket| %>
+    <tr>
+      <td><%= ticket.ContactCenter %></td>
+      <td><%= ticket.RequestNumber %></td>
+      <td><%= ticket.SequenceNumber %></td>
+      <td><%= link_to "Show Polygon", ticket_path(ticket) %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
